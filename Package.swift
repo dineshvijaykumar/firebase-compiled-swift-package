@@ -9,7 +9,29 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Firebase-binaries",
-            targets: ["Firebase-binaries"]),
+            targets: [
+                      "abseil",
+                      "BoringSSL-GRPC",
+                      "FirebaseAnalytics",
+                      "FirebaseAuth",
+                      "FirebaseCore",
+                      "FirebaseCoreDiagnostics",
+                      "FirebaseCrashlytics",
+                      "FirebaseDynamicLinks",
+                      "FirebaseFirestore",
+                      "FirebaseInstallations",
+                      "FirebaseMessaging",
+                      "GoogleAppMeasurement",
+                      "GoogleAppMeasurementIdentitySupport",
+                      "GoogleDataTransport",
+                      "GoogleUtilities",
+                      "gRPC-C++",
+                      "gRPC-Core",
+                      "GTMSessionFetcher",
+                      "leveldb-library",
+                      "nanopb",
+                      "PromisesObjC",
+                     ]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -18,11 +40,89 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "Firebase-binaries",
-            dependencies: []),
-        .testTarget(
-            name: "Firebase-binariesTests",
-            dependencies: ["Firebase-binaries"]),
+        .binaryTarget(
+            name: "abseil",
+            path: "Sources/Firebase-binaries/abseil.xcframework"
+        ),
+        .binaryTarget(
+            name: "BoringSSL-GRPC",
+            path: "Sources/Firebase-binaries/BoringSSL-GRPC.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseAnalytics",
+            path: "Sources/Firebase-binaries/FirebaseAnalytics.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseAuth",
+            path: "Sources/Firebase-binaries/FirebaseAuth.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseCore",
+            path: "Sources/Firebase-binaries/FirebaseCore.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseCoreDiagnostics",
+            path: "Sources/Firebase-binaries/FirebaseCoreDiagnostics.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseCrashlytics",
+            path: "Sources/Firebase-binaries/FirebaseCrashlytics.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseDynamicLinks",
+            path: "Sources/Firebase-binaries/FirebaseDynamicLinks.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseFirestore",
+            path: "Sources/Firebase-binaries/FirebaseFirestore.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseInstallations",
+            path: "Sources/Firebase-binaries/FirebaseInstallations.xcframework"
+        ),
+        .binaryTarget(
+            name: "FirebaseMessaging",
+            path: "Sources/Firebase-binaries/FirebaseMessaging.xcframework"
+        ),
+        .binaryTarget(
+            name: "GoogleAppMeasurement",
+            path: "Sources/Firebase-binaries/GoogleAppMeasurement.xcframework"
+        ),
+        .binaryTarget(
+            name: "GoogleAppMeasurementIdentitySupport",
+            path: "Sources/Firebase-binaries/GoogleAppMeasurementIdentitySupport.xcframework"
+        ),
+        .binaryTarget(
+            name: "GoogleDataTransport",
+            path: "Sources/Firebase-binaries/GoogleDataTransport.xcframework"
+        ),
+        .binaryTarget(
+            name: "GoogleUtilities",
+            path: "Sources/Firebase-binaries/GoogleUtilities.xcframework"
+        ),
+        .binaryTarget(
+            name: "gRPC-C++",
+            path: "Sources/Firebase-binaries/gRPC-C++.xcframework"
+        ),
+        .binaryTarget(
+            name: "gRPC-Core",
+            path: "Sources/Firebase-binaries/gRPC-Core.xcframework"
+        ),
+        .binaryTarget(
+            name: "GTMSessionFetcher",
+            path: "Sources/Firebase-binaries/GTMSessionFetcher.xcframework"
+        ),
+        .binaryTarget(
+            name: "leveldb-library",
+            path: "Sources/Firebase-binaries/leveldb-library.xcframework"
+        ),
+        .binaryTarget(
+            name: "nanopb",
+            path: "Sources/Firebase-binaries/nanopb.xcframework"
+        ),
+        .binaryTarget(
+            name: "PromisesObjC",
+            path: "Sources/Firebase-binaries/PromisesObjC.xcframework"
+        )
     ]
 )
